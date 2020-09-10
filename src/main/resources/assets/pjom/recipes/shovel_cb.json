@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": [
+        "C",
+        "S",
+        "S"
+    ],
+
+    "key": {
+        "C": {
+            "item": "pjom:ingot_cb"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+
+    "result": {
+        "item": "pjom:shovel_cb"
+    }
+}

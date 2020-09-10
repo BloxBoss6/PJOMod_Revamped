@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "pjom:blocks/ore_overworld_si"
+   }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": [
+        "III",
+        " S ",
+        " S "
+    ],
+
+    "key": {
+        "I": {
+            "item": "pjom:ingot_si"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+
+    "result": {
+        "item": "pjom:pickaxe_si"
+    }
+}

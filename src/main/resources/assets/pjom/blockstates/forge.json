@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "burning=false,facing=north": { "model": "pjom:forge" },
+        "burning=false,facing=east": { "model": "pjom:forge", "y": 90 },
+        "burning=false,facing=south": { "model": "pjom:forge", "y": 180 },
+        "burning=false,facing=west": { "model": "pjom:forge", "y": 270 },
+        "burning=true,facing=north": { "model": "pjom:lit_forge" },
+        "burning=true,facing=east": { "model": "pjom:lit_forge", "y": 90 },
+        "burning=true,facing=south": { "model": "pjom:lit_forge", "y": 180 },
+        "burning=true,facing=west": { "model": "pjom:lit_forge", "y": 270 }
+    }
+}

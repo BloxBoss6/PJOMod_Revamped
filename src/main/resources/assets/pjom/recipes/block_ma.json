@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": [
+        "MMM",
+        "MMM",
+        "MMM"
+    ],
+
+    "key": {
+        "M": {
+            "item": "pjom:ingot_ma"
+        }
+    },
+
+    "result": {
+        "item": "pjom:block_ma"
+    }
+}

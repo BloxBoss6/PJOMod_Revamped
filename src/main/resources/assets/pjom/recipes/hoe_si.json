@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": [
+        "II",
+        " S",
+        " S"
+    ],
+
+    "key": {
+        "I": {
+            "item": "pjom:ingot_si"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+
+    "result": {
+        "item": "pjom:hoe_si"
+    }
+}

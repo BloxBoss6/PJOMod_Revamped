@@ -1,0 +1,84 @@
+{
+  "pools": [
+    {
+      "name": "SatyrSpecial",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 24,
+          "name": "pjom:sword_cb",
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "unbreaking",
+                "mending",
+                "sharpness",
+                "knockback",
+                "fire_aspect",
+                "looting"
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.9
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 70,
+          "name": "pjom:ingot_cb",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "name": "minecraft:skull",
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{display:{Name:\"Brain Skull\"},SkullOwner:{Id:\"ff24d6a4-7603-4d0e-8415-f7f4343f5faa\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGIxYjc3YTY4NGJlNGZmYTIxMjE5YzNmYmZmMTYzZWFkYWFkY2M2MzA5Mzk5NjQ2YzE1ZDYxMWZmN2IyY2U0In19fQ==\"}]}}}"
+            },
+            {
+              "function": "set_data",
+              "data": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SatyrMain",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:mutton",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

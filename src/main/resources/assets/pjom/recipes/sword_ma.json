@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": [
+        "M",
+        "M",
+        "S"
+    ],
+
+    "key": {
+        "M": {
+            "item": "pjom:ingot_ma"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+
+    "result": {
+        "item": "pjom:sword_ma"
+    }
+}

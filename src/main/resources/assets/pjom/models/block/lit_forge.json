@@ -1,0 +1,12 @@
+{
+   "parent": "block/orientable",
+   "textures": {
+       "particle": "pjom:blocks/forge_top",
+       "up": "pjom:blocks/forge_top",
+       "down": "pjom:blocks/forge_top",
+       "north": "pjom:blocks/forge_front_on",
+       "east": "pjom:blocks/forge_side",
+       "south": "pjom:blocks/forge_side",
+       "west": "pjom:blocks/forge_side"
+   }
+}

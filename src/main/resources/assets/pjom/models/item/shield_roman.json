@@ -1,0 +1,105 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "pjom:items/shield_roman"
+	},
+	"elements": [
+		{
+			"name": "Plate1",
+			"from": [-6, -11, 1],
+			"to": [6, 17, 2],
+			"faces": {
+				"north": {"uv": [3.5, 0.25, 6.5, 7], "texture": "#0"},
+				"east": {"uv": [3.25, 0.25, 3.5, 7], "texture": "#0"},
+				"south": {"uv": [0.25, 0.25, 3.25, 7], "texture": "#0"},
+				"west": {"uv": [0, 0.25, 0.25, 7], "texture": "#0"},
+				"up": {"uv": [0.25, 0, 3.25, 0.25], "texture": "#0"},
+				"down": {"uv": [3.25, 0, 6.25, 0.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Handle",
+			"from": [-1, 0, -5],
+			"to": [1, 6, 1],
+			"faces": {
+				"north": {"uv": [8, 1.5, 8.5, 3], "texture": "#0"},
+				"east": {"uv": [8.5, 1.5, 10, 3], "texture": "#0"},
+				"south": {"uv": [10, 1.5, 10.5, 3], "texture": "#0"},
+				"west": {"uv": [6.5, 1.5, 8, 3], "texture": "#0"},
+				"up": {"uv": [8, 0, 8.5, 1.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0, 9, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Plate2",
+			"from": [10.5, -11, -2.5],
+			"to": [13.5, 17, -1.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [12.5, 8, 5.75]},
+			"faces": {
+				"north": {"uv": [1.25, 7.25, 2, 14], "texture": "#0"},
+				"east": {"uv": [1, 7.25, 1.25, 14], "texture": "#0"},
+				"south": {"uv": [0.25, 7.25, 1, 14], "texture": "#0"},
+				"west": {"uv": [0, 7.25, 0.25, 14], "texture": "#0"},
+				"up": {"uv": [0.25, 7, 1, 7.25], "texture": "#0"},
+				"down": {"uv": [1, 7, 1.75, 7.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Plate3",
+			"from": [-13.8, -11, -1.75],
+			"to": [-10.8, 17, -0.75],
+			"rotation": {"angle": -45, "axis": "y", "origin": [-11.75, 8, 6.5]},
+			"faces": {
+				"north": {"uv": [1.25, 7.25, 2, 14], "texture": "#0"},
+				"east": {"uv": [0, 7.25, 0.25, 14], "texture": "#0"},
+				"south": {"uv": [0.25, 7.25, 1, 14], "texture": "#0"},
+				"west": {"uv": [1, 7.25, 1.25, 14], "texture": "#0"},
+				"up": {"uv": [0.25, 7, 1, 7.25], "texture": "#0"},
+				"down": {"uv": [1, 7, 1.75, 7.25], "texture": "#0"}
+			}
+		}
+	],
+	"overrides": [
+		{
+			"predicate": {
+				"blocking": 1
+			},
+			"model": "pjom:item/shield_roman_blocking"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [10.51, 3, -4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [10.51, 3, 12]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 180, 5],
+			"translation": [-10, -1, -10],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 180, 5],
+			"translation": [10, -3, -10],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"ground": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -1.75, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [15, -25, -5],
+			"translation": [2, 0.75, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"translation": [-4, 2.5, -4.25],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

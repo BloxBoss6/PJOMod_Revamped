@@ -1,0 +1,91 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "pjom:items/spear_jason"
+	},
+	"elements": [
+		{
+			"name": "Staff",
+			"from": [8, 0, 8],
+			"to": [9, 28, 9],
+			"faces": {
+				"north": {"uv": [0, 0.5, 0.5, 15.5], "texture": "#0"},
+				"east": {"uv": [1.5, 0.5, 2, 15.5], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1, 15.5], "texture": "#0"},
+				"west": {"uv": [1, 0.5, 1.5, 15.5], "texture": "#0"},
+				"up": {"uv": [0.5, 0, 1, 0.5], "texture": "#0"},
+				"down": {"uv": [1, 0, 1.5, 0.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Spearhead2",
+			"from": [8, 30.8, 8.5],
+			"to": [9, 31.8, 8.7],
+			"faces": {
+				"north": {"uv": [3, 2, 3.5, 2.5], "texture": "#0"},
+				"east": {"uv": [4, 3, 4.5, 3.5], "texture": "#0"},
+				"south": {"uv": [3, 3, 3.5, 3.5], "texture": "#0"},
+				"west": {"uv": [4, 2, 4.5, 2.5], "texture": "#0"},
+				"up": {"uv": [5, 2, 5.5, 2.5], "texture": "#0"},
+				"down": {"uv": [5, 3, 5.5, 3.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Spearhead1",
+			"from": [7, 26.8, 8.5],
+			"to": [10, 30.8, 8.7],
+			"faces": {
+				"north": {"uv": [3, 2, 4.5, 4], "texture": "#0"},
+				"east": {"uv": [5.3, 1.5, 5.5, 4], "texture": "#0"},
+				"south": {"uv": [4.5, 2, 6, 4], "texture": "#0"},
+				"west": {"uv": [3.5, 1.5, 3.7, 4], "texture": "#0"},
+				"up": {"uv": [3, 2.5, 6, 2.7], "texture": "#0"},
+				"down": {"uv": [3, 3, 6, 3.2], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [1.4, 1.4, 1.4],
+			"translation": [-0.5, -5.5, 1]
+		},
+		"thirdperson_lefthand": {
+			"scale": [1.4, 1.4, 1.4],
+			"translation": [0.5, -5.5, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [-23, 94, -23],
+			"translation": [0.5, -1.5, 10]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-23, 94, -23],
+			"translation": [0.5, -3.5, 10]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, -3.5, 0]
+		},
+		"fixed": {
+			"scale": [0.8, 0.8, 0.8],
+			"rotation": [0, 0, 45],
+			"translation": [4, -5, -1]
+		},
+		"gui": {
+			"scale": [0.65, 0.65, 0.65],
+			"rotation": [0, 0, -45],
+			"translation": [-4, -3.5, 0]
+		}
+	},
+	"groups": [0,
+		{
+			"name": "Spearhead",
+			"isOpen": true,
+			"shade": true,
+			"display": {
+				"visibility": true,
+				"autouv": true
+			},
+			"children": [1, 2]
+		}
+	]
+}

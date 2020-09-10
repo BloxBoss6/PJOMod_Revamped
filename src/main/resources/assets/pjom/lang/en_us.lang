@@ -1,0 +1,92 @@
+itemGroup.pjotab=PJO Mod
+itemGroup.pjoraretab=PJO Rare Artifacts
+entity.satyr.name=Satyr
+entity.spartus.name=Spartus
+
+// Celestial Bronze
+tile.ore_overworld_cb.name=Celestial Bronze Ore
+item.ingot_cb.name=Celestial Bronze Ingot
+item.rod_cb.name=Celestial Bronze Rod
+item.sword_cb.name=Celestial Bronze Sword
+item.knife_cb.name=Celestial Bronze Knife
+item.axe_cb.name=Celestial Bronze Axe
+item.pickaxe_cb.name=Celestial Bronze Pickaxe
+item.shovel_cb.name=Celestial Bronze Shovel
+item.hoe_cb.name=Celestial Bronze Hoe
+item.shield_cb.name=Celestial Bronze Shield
+item.helmet_cb.name=Celestial Bronze Helmet
+item.chestplate_cb.name=Celestial Bronze Chestplate
+item.leggings_cb.name=Celestial Bronze Leggings
+item.boots_cb.name=Celestial Bronze Boots
+
+// Imperial Gold
+item.ingot_ig.name=Imperial Gold Ingot
+item.rod_ig.name=Imperial Gold Rod
+item.sword_ig.name=Imperial Gold Sword
+item.knife_ig.name=Imperial Gold Knife
+item.pickaxe_ig.name=Imperial Gold Pickaxe
+item.axe_ig.name=Imperial Gold Axe
+item.shovel_ig.name=Imperial Gold Shovel
+item.hoe_ig.name=Imperial Gold Hoe
+item.shield_roman.name=Roman Shield
+item.helmet_ig.name=Imperial Gold Helmet
+item.chestplate_ig.name=Imperial Gold Chestplate
+item.leggings_ig.name=Imperial Gold Leggings
+item.boots_ig.name=Imperial Gold Boots
+
+// Mixed Alloy
+item.ingot_ma.name=Mixed Alloy Ingot
+tile.block_ma.name=Mixed Alloy Block
+item.sword_ma.name=Mixed Alloy Sword
+item.knife_ma.name=Mixed Alloy Knife
+
+// Stygian Iron
+tile.ore_overworld_si.name=Stygian Iron Ore
+tile.ore_nether_si.name=Stygian Iron Nether Ore
+item.ingot_si.name=Stygian Iron Ingot
+item.sword_si.name=Stygian Iron Sword
+item.knife_si.name=Stygian Iron Knife
+item.pickaxe_si.name=Stygian Iron Pickaxe
+item.axe_si.name=Stygian Iron Axe
+item.shovel_si.name=Stygian Iron Shovel
+item.hoe_si.name=Stygian Iron Hoe
+
+// Rare Artifacts
+item.pen_riptide.name=Riptide (Pen Form)
+item.sword_riptide.name=Riptide (Sword Form)
+item.mace_thalia.name=Thalia's Spear (Mace Form)
+item.spear_thalia.name=Thalia's Spear
+item.coin_jason.name=Jason's Coin
+item.sword_jason.name=Jason's Gladius
+item.spear_jason.name=Jason's Spear
+item.sword_backbiter.name=Backbiter
+item.knife_katoptris.name=Katoptris
+item.scythe_kronos.name=Kronos' Scythe
+item.shield_aegis.name=Aegis
+
+// Casts and Parts
+item.cast_blank.name=Blank Cast
+item.cast_hilt.name=Hilt Cast
+item.cast_knife.name=Knife Blade Cast
+item.cast_sword.name=Sword Blade Cast
+item.hilt_part_cb.name=Celestial Bronze Hilt
+item.hilt_part_ig.name=Imperial Gold Hilt
+item.hilt_part_si.name=Stygian Iron Hilt
+item.knife_part_cb.name=Celestial Bronze Knife Blade
+item.knife_part_ig.name=Imperial Gold Knife Blade
+item.knife_part_si.name=Stygian Iron Knife Blade
+item.sword_part_cb.name=Celestial Bronze Sword Blade
+item.sword_part_ig.name=Imperial Gold Sword Blade
+item.sword_part_si.name=Stygian Iron Sword Blade
+
+// Misc
+item.shirt_ch.name=Camp Half-Blood Shirt
+item.shirt_cj.name=Camp Jupiter Shirt
+tile.forge.name=Forge
+container.forge=Forge
+key.pjom.swap_weapon=Swap Weapons
+key.categories.pjom=PJO Mod
+item.helmet_trojan.name=Trojan Helmet
+item.chestplate_trojan.name=Trojan Chestplate
+item.leggings_trojan.name=Trojan Leggings
+item.boots_trojan.name=Trojan Boots
