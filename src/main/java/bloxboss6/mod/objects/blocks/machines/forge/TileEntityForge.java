@@ -191,11 +191,12 @@ public class TileEntityForge extends TileEntity implements IInventory, ITickable
 
 
     private boolean canSmelt() {
-        if (((ItemStack) this.inventory.get(0)).isEmpty() || ((ItemStack) this.inventory.get(1)).isEmpty() || ((ItemStack) this.inventory.get(0)).getCount() < ForgeRecipes.getInputCount()) {
+        if (((ItemStack) this.inventory.get(0)).isEmpty() || ((ItemStack) this.inventory.get(1)).isEmpty()) {
             return false;
         } else {
             ItemStack result = ForgeRecipes.getInstance().getForgeResult((ItemStack) this.inventory.get(0), (ItemStack) this.inventory.get(1));
-            if (result.isEmpty()) return false;
+            int count = ForgeRecipes.getInstance().getInputCount((ItemStack) this.inventory.get(0));
+            if (result.isEmpty() || ((ItemStack) this.inventory.get(0)).getCount() < count) return false;
             else {
                 ItemStack output = (ItemStack) this.inventory.get(3);
                 if (output.isEmpty()) return true;
@@ -210,7 +211,7 @@ public class TileEntityForge extends TileEntity implements IInventory, ITickable
         if (this.canSmelt()) {
             ItemStack input1 = (ItemStack) this.inventory.get(0);
             ItemStack input2 = (ItemStack) this.inventory.get(1);
-            int count = ForgeRecipes.getInputCount();
+            int count = ForgeRecipes.getInstance().getInputCount(input1);
             ItemStack result = ForgeRecipes.getInstance().getForgeResult(input1, input2);
             ItemStack output = (ItemStack) this.inventory.get(3);
 

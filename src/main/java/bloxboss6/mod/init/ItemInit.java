@@ -130,6 +130,4 @@ public class ItemInit {
     public static final Item LEGGINGS_TROJAN = new ArmorTrojan("leggings_trojan", ARMOR_TROJAN, 2, EntityEquipmentSlot.LEGS);
     public static final Item BOOTS_TROJAN = new ArmorTrojan("boots_trojan", ARMOR_TROJAN, 1, EntityEquipmentSlot.FEET);
 
-    //public static final Item HOLY_CLOAK = new ItemHolyCloak("holy_cloak", Main.pjotab);
-
 }
