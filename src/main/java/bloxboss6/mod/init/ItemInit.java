@@ -48,10 +48,10 @@ public class ItemInit {
     public static final Item SHIELD_CB = new ToolShield("shield_cb", Main.pjotab);
 
     //Celestial Bronze Armor
-    public static final Item HELMET_CB = new ArmorBase("helmet_cb", ARMOR_CB, 1, EntityEquipmentSlot.HEAD);
-    public static final Item CHESTPLATE_CB = new ArmorBase("chestplate_cb", ARMOR_CB, 1, EntityEquipmentSlot.CHEST);
-    public static final Item LEGGINGS_CB = new ArmorBase("leggings_cb", ARMOR_CB, 2, EntityEquipmentSlot.LEGS);
-    public static final Item BOOTS_CB = new ArmorBase("boots_cb", ARMOR_CB, 1, EntityEquipmentSlot.FEET);
+    public static final Item HELMET_CB = new ArmorTrojan("helmet_cb", ARMOR_CB, 1, EntityEquipmentSlot.HEAD);
+    public static final Item CHESTPLATE_CB = new ArmorTrojan("chestplate_cb", ARMOR_CB, 1, EntityEquipmentSlot.CHEST);
+    public static final Item LEGGINGS_CB = new ArmorTrojan("leggings_cb", ARMOR_CB, 2, EntityEquipmentSlot.LEGS);
+    public static final Item BOOTS_CB = new ArmorTrojan("boots_cb", ARMOR_CB, 1, EntityEquipmentSlot.FEET);
 
     //Imperial Gold Items
     public static final Item INGOT_IG = new ItemBase("ingot_ig", Main.pjotab);

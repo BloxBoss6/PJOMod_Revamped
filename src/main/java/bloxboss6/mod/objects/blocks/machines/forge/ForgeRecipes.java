@@ -16,7 +16,7 @@ public class ForgeRecipes
     private final Table<ItemStack, ItemStack, ItemStack> smeltingList = HashBasedTable.<ItemStack, ItemStack, ItemStack>create();
     private final Map<ItemStack, Float> experienceList = Maps.<ItemStack, Float>newHashMap();
     private final Map<ItemStack, Integer> countAmount = new HashMap<>();
-    private static int inputCount;
+    //private static int inputCount;
 
     public static ForgeRecipes getInstance()
     {
@@ -51,14 +51,6 @@ public class ForgeRecipes
         this.smeltingList.put(input1, input2, result);
         this.experienceList.put(result, Float.valueOf(experience));
         this.countAmount.put(input2, count);
-
-        if (input1.getItem() == ItemInit.CAST_SWORD) {
-            inputCount = 3;
-        } else if (input1.getItem() == ItemInit.CAST_KNIFE) {
-            inputCount = 2;
-        } else if (input1.getItem() == ItemInit.CAST_HILT) {
-            inputCount = 1;
-        }
     }
 
     /*public static int getInputCount() {
