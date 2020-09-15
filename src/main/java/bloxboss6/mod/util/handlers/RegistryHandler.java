@@ -6,7 +6,6 @@ import bloxboss6.mod.init.EntityInit;
 import bloxboss6.mod.init.ItemInit;
 import bloxboss6.mod.util.interfaces.IHasModel;
 import bloxboss6.mod.util.keybinds.KeyInputHandler;
-import bloxboss6.mod.util.keybinds.Keybinds;
 import bloxboss6.mod.world.gen.WorldGenCustomOres;
 import net.minecraft.block.Block;
 import net.minecraft.init.Enchantments;
@@ -55,7 +54,7 @@ public class RegistryHandler {
 
         EntityInit.registerEntities();
         RenderHandler.registerEntityRenders();
-        Keybinds.register();
+        //Keybinds.register();
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
     }
 
@@ -65,6 +64,7 @@ public class RegistryHandler {
         stack.addEnchantment(Enchantments.SWEEPING, 2);
     }
 
-    public static void postInitRegistries() {}
+    public static void postInitRegistries() {
+    }
 
 }

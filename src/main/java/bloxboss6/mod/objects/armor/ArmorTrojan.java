@@ -9,8 +9,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.Nullable;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ArmorTrojan extends ItemArmor implements IHasModel {
 
@@ -31,7 +31,7 @@ public class ArmorTrojan extends ItemArmor implements IHasModel {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
     }
 
-    @Nullable
+    @SideOnly(Side.CLIENT)
     @Override
     public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
         if(itemStack != ItemStack.EMPTY){
