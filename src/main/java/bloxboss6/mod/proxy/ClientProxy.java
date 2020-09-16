@@ -28,9 +28,10 @@ public class ClientProxy extends CommonProxy implements ISideProxy {
     public static KeyBinding[] keyBindings;
 
     public static void setKeyBindings(KeyBinding[] keyBindings) {
-        keyBindings = new KeyBinding[1];
+        keyBindings = new KeyBinding[2];
 
         keyBindings[0] = new KeyBinding("key.pjom.swap_weapon", Keyboard.KEY_V, "key.categories.pjom");
+        keyBindings[1] = new KeyBinding("key.pjom.toolbelt", Keyboard.KEY_M, "key.categories.pjom");
 
         for (int i = 0; i < keyBindings.length; ++i)
         {

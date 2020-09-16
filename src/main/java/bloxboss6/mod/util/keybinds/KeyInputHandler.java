@@ -2,8 +2,6 @@ package bloxboss6.mod.util.keybinds;
 
 import bloxboss6.mod.init.ItemInit;
 import bloxboss6.mod.proxy.ClientProxy;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,7 +9,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -51,7 +48,7 @@ public class KeyInputHandler {
         KeyBinding[] keyBindings = ClientProxy.keyBindings;
 
         // check each enumerated key binding type for pressed and take appropriate action
-        if (keyBindings[0].isPressed())
+        /*if (keyBindings[0].isPressed())
         {
             // DEBUG
             System.out.println("Key binding ="+keyBindings[0].getKeyDescription());
@@ -69,7 +66,12 @@ public class KeyInputHandler {
                 }
 
             }
-        }
+        }*/
+
+        /*if (keyBindings[1].isPressed()) {
+            // DEBUG
+            System.out.println("Key binding ="+keyBindings[1].getKeyDescription());
+        }*/
     }
 
 

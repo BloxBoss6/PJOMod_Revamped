@@ -4,6 +4,7 @@ import bloxboss6.mod.Main;
 import bloxboss6.mod.init.BlockInit;
 import bloxboss6.mod.init.EntityInit;
 import bloxboss6.mod.init.ItemInit;
+import bloxboss6.mod.objects.items.RiptideSignEditor;
 import bloxboss6.mod.util.interfaces.IHasModel;
 import bloxboss6.mod.util.keybinds.KeyInputHandler;
 import bloxboss6.mod.world.gen.WorldGenCustomOres;
@@ -56,6 +57,7 @@ public class RegistryHandler {
         RenderHandler.registerEntityRenders();
         //Keybinds.register();
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
+        MinecraftForge.EVENT_BUS.register(new RiptideSignEditor());
     }
 
     public static void initRegistries() {
