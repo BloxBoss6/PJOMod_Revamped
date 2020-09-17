@@ -4,12 +4,9 @@ import bloxboss6.mod.objects.armor.models.ModelShirt;
 import bloxboss6.mod.util.Reference;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import org.lwjgl.input.Keyboard;
 
 public class ClientProxy extends CommonProxy implements ISideProxy {
 
@@ -24,20 +21,6 @@ public class ClientProxy extends CommonProxy implements ISideProxy {
     }
 
     private static final ModelShirt modelShirt = new ModelShirt();
-
-    public static KeyBinding[] keyBindings;
-
-    public static void setKeyBindings(KeyBinding[] keyBindings) {
-        keyBindings = new KeyBinding[2];
-
-        keyBindings[0] = new KeyBinding("key.pjom.swap_weapon", Keyboard.KEY_V, "key.categories.pjom");
-        keyBindings[1] = new KeyBinding("key.pjom.toolbelt", Keyboard.KEY_M, "key.categories.pjom");
-
-        for (int i = 0; i < keyBindings.length; ++i)
-        {
-            ClientRegistry.registerKeyBinding(keyBindings[i]);
-        }
-    }
 
     @Override
     public ModelBiped getArmorModel(String modelName) {
