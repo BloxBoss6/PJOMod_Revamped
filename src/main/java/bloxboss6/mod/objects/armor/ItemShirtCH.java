@@ -23,12 +23,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import vazkii.botania.api.item.IPhantomInkable;
 
 import javax.annotation.Nullable;
 import java.util.List;
-
-import static bloxboss6.mod.Main.proxy;
 
 public class ItemShirtCH extends ItemArmorPJO
         implements IBauble, ISpecialArmor, IRenderBauble, IHasModel {
@@ -72,9 +69,6 @@ public class ItemShirtCH extends ItemArmorPJO
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
         if (!stack.isEmpty() && stack.getItem() instanceof ItemArmorPJO) {
-            if (stack.getItem() instanceof IPhantomInkable
-                    && ((IPhantomInkable) stack.getItem()).hasPhantomInk(stack))
-                return new ModelBiped();
             ModelBiped model = new ModelShirt();
             model.isSneak = defaultModel.isSneak;
             model.isRiding = defaultModel.isRiding;
@@ -95,9 +89,6 @@ public class ItemShirtCH extends ItemArmorPJO
     @SideOnly(Side.CLIENT)
     public void onPlayerBaubleRender(ItemStack stack, EntityPlayer player, RenderType type, float partialTicks) {
         if (type != RenderType.BODY)
-            return;
-        if (stack.getItem() instanceof IPhantomInkable
-                && ((IPhantomInkable) stack.getItem()).hasPhantomInk(stack))
             return;
 
         if (type == RenderType.BODY) {
@@ -141,11 +132,6 @@ public class ItemShirtCH extends ItemArmorPJO
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip,
                                ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        if (stack.getItem() instanceof IPhantomInkable
-                && ((IPhantomInkable) stack.getItem()).hasPhantomInk(stack)) {
-            tooltip.add(
-                    proxy.translate(Reference.MODID + ".misc.hasPhantomInk"));
-        }
     }
 
     @Override

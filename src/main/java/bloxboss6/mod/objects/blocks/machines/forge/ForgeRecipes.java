@@ -6,7 +6,6 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Table;
 import net.minecraft.item.ItemStack;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -15,8 +14,6 @@ public class ForgeRecipes
     private static final ForgeRecipes INSTANCE = new ForgeRecipes();
     private final Table<ItemStack, ItemStack, ItemStack> smeltingList = HashBasedTable.<ItemStack, ItemStack, ItemStack>create();
     private final Map<ItemStack, Float> experienceList = Maps.<ItemStack, Float>newHashMap();
-    private final Map<ItemStack, Integer> countAmount = new HashMap<>();
-    //private static int inputCount;
 
     public static ForgeRecipes getInstance()
     {
@@ -26,36 +23,31 @@ public class ForgeRecipes
     private ForgeRecipes()
     {
         // Sword Parts
-        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_CB), 3, new ItemStack(ItemInit.SWORD_PART_CB), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_IG), 3, new ItemStack(ItemInit.SWORD_PART_IG), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_MA), 3,  new ItemStack(ItemInit.SWORD_PART_MA), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_SI), 3,  new ItemStack(ItemInit.SWORD_PART_SI), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_CB), new ItemStack(ItemInit.SWORD_PART_CB), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_IG), new ItemStack(ItemInit.SWORD_PART_IG), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_MA), new ItemStack(ItemInit.SWORD_PART_MA), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_SWORD), new ItemStack(ItemInit.INGOT_SI), new ItemStack(ItemInit.SWORD_PART_SI), 5.0F);
 
         // Knife Parts
-        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_CB), 2, new ItemStack(ItemInit.KNIFE_PART_CB), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_IG), 2, new ItemStack(ItemInit.KNIFE_PART_IG), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_MA), 2, new ItemStack(ItemInit.KNIFE_PART_MA), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_SI), 2, new ItemStack(ItemInit.KNIFE_PART_SI), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_CB), new ItemStack(ItemInit.KNIFE_PART_CB), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_IG), new ItemStack(ItemInit.KNIFE_PART_IG), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_MA), new ItemStack(ItemInit.KNIFE_PART_MA), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_KNIFE), new ItemStack(ItemInit.INGOT_SI), new ItemStack(ItemInit.KNIFE_PART_SI), 5.0F);
 
         // Hilt Parts
-        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_CB), 1, new ItemStack(ItemInit.HILT_PART_CB), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_IG), 1, new ItemStack(ItemInit.HILT_PART_IG), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_MA), 1, new ItemStack(ItemInit.HILT_PART_MA), 5.0F);
-        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_SI), 1, new ItemStack(ItemInit.HILT_PART_SI), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_CB), new ItemStack(ItemInit.HILT_PART_CB), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_IG), new ItemStack(ItemInit.HILT_PART_IG), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_MA), new ItemStack(ItemInit.HILT_PART_MA), 5.0F);
+        addForgeRecipe(new ItemStack(ItemInit.CAST_HILT), new ItemStack(ItemInit.INGOT_SI), new ItemStack(ItemInit.HILT_PART_SI), 5.0F);
     }
 
 
-    public void addForgeRecipe(ItemStack input1, ItemStack input2, int count, ItemStack result, float experience)
+    public void addForgeRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience)
     {
         if(getForgeResult(input1, input2) != ItemStack.EMPTY) return;
         this.smeltingList.put(input1, input2, result);
         this.experienceList.put(result, Float.valueOf(experience));
-        this.countAmount.put(input2, count);
     }
-
-    /*public static int getInputCount() {
-        return inputCount;
-    }*/
 
     public ItemStack getForgeResult(ItemStack input1, ItemStack input2)
     {
@@ -95,16 +87,5 @@ public class ForgeRecipes
             }
         }
         return 0.0F;
-    }
-
-    public int getInputCount(ItemStack stack) {
-        for (Entry<ItemStack, Integer> entry : this.countAmount.entrySet())
-        {
-            if(this.compareItemStacks(stack, entry.getKey()))
-            {
-                return entry.getValue();
-            }
-        }
-        return 0;
     }
 }

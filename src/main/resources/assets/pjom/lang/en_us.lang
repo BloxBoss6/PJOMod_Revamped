@@ -72,12 +72,15 @@ item.cast_sword.name=Sword Blade Cast
 item.hilt_part_cb.name=Celestial Bronze Hilt
 item.hilt_part_ig.name=Imperial Gold Hilt
 item.hilt_part_si.name=Stygian Iron Hilt
+item.hilt_part_ma.name=Mixed Alloy Hilt
 item.knife_part_cb.name=Celestial Bronze Knife Blade
 item.knife_part_ig.name=Imperial Gold Knife Blade
 item.knife_part_si.name=Stygian Iron Knife Blade
+item.knife_part_ma.name=Mixed Alloy Knife Blade
 item.sword_part_cb.name=Celestial Bronze Sword Blade
 item.sword_part_ig.name=Imperial Gold Sword Blade
 item.sword_part_si.name=Stygian Iron Sword Blade
+item.sword_part_ma.name=Mixed Alloy Sword Blade
 
 // Misc
 item.shirt_ch.name=Camp Half-Blood Shirt

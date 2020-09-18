@@ -1,5 +1,6 @@
 package bloxboss6.mod.objects.blocks.machines.forge;
 
+import bloxboss6.mod.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -190,13 +191,27 @@ public class TileEntityForge extends TileEntity implements IInventory, ITickable
     }
 
 
+    private boolean hasIncorrectCount(){
+        ItemStack input1 = this.inventory.get(0);
+        ItemStack input2 = this.inventory.get(1);
+
+        if(input2.getItem() == ItemInit.CAST_SWORD && input1.getCount() < 3) {
+            return true;
+        } else if(input2.getItem() == ItemInit.CAST_KNIFE && input1.getCount() < 2) {
+            return true;
+        } else if(input2.getItem() == ItemInit.CAST_HILT && input1.getCount() < 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private boolean canSmelt() {
         if (((ItemStack) this.inventory.get(0)).isEmpty() || ((ItemStack) this.inventory.get(1)).isEmpty()) {
             return false;
         } else {
             ItemStack result = ForgeRecipes.getInstance().getForgeResult((ItemStack) this.inventory.get(0), (ItemStack) this.inventory.get(1));
-            int count = ForgeRecipes.getInstance().getInputCount((ItemStack) this.inventory.get(0));
-            if (result.isEmpty() || ((ItemStack) this.inventory.get(0)).getCount() < count) return false;
+            if (result.isEmpty() || hasIncorrectCount()) return false;
             else {
                 ItemStack output = (ItemStack) this.inventory.get(3);
                 if (output.isEmpty()) return true;
@@ -211,14 +226,19 @@ public class TileEntityForge extends TileEntity implements IInventory, ITickable
         if (this.canSmelt()) {
             ItemStack input1 = (ItemStack) this.inventory.get(0);
             ItemStack input2 = (ItemStack) this.inventory.get(1);
-            int count = ForgeRecipes.getInstance().getInputCount(input1);
             ItemStack result = ForgeRecipes.getInstance().getForgeResult(input1, input2);
             ItemStack output = (ItemStack) this.inventory.get(3);
 
             if (output.isEmpty()) this.inventory.set(3, result.copy());
             else if (output.getItem() == result.getItem()) output.grow(result.getCount());
 
-            input1.shrink(count);
+            if(input2.getItem() == ItemInit.CAST_SWORD) {
+                input1.shrink(3);
+            } else if(input2.getItem() == ItemInit.CAST_KNIFE) {
+                input1.shrink(2);
+            } else if(input2.getItem() == ItemInit.CAST_HILT) {
+                input1.shrink(1);
+            }
             //input2.shrink(1);
         }
     }
