@@ -5,15 +5,19 @@ import bloxboss6.mod.init.BlockInit;
 import bloxboss6.mod.init.EntityInit;
 import bloxboss6.mod.init.ItemInit;
 import bloxboss6.mod.objects.items.RiptideSignEditor;
+import bloxboss6.mod.util.Reference;
 import bloxboss6.mod.util.interfaces.IHasModel;
 import bloxboss6.mod.util.keybinds.KeyInputHandler;
 import bloxboss6.mod.util.keybinds.Keybinds;
 import bloxboss6.mod.world.gen.WorldGenCustomOres;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -51,15 +55,20 @@ public class RegistryHandler {
 
     }
 
+    public static void registerModel(Item item){
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName(), "inventory"));
+    }
+
     public static void preInitRegistries() {
         GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 
         EntityInit.registerEntities();
         RenderHandler.registerEntityRenders();
         MinecraftForge.EVENT_BUS.register(new RiptideSignEditor());
-        //registerKeyBinds();
         Keybinds.register();
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
+        OBJLoader.INSTANCE.addDomain(Reference.MODID);
+        registerModel(ItemInit.NEW_RIPTIDE);
     }
 
     public static void initRegistries() {

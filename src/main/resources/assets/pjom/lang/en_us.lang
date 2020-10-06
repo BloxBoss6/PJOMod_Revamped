@@ -52,9 +52,9 @@ item.shovel_si.name=Stygian Iron Shovel
 item.hoe_si.name=Stygian Iron Hoe
 
 // Rare Artifacts
-item.pen_riptide.name=Riptide (Pen Form)
-item.sword_riptide.name=Riptide (Sword Form)
-item.mace_thalia.name=Thalia's Spear (Mace Form)
+item.pen_riptide.name=Riptide (§oPen Form§r)
+item.sword_riptide.name=Riptide (§oSword Form§r)
+item.mace_thalia.name=Thalia's Spear (§oMace Form§r)
 item.spear_thalia.name=Thalia's Spear
 item.coin_jason.name=Jason's Coin
 item.sword_jason.name=Jason's Gladius

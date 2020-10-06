@@ -1,7 +1,10 @@
 package bloxboss6.mod.init;
 
 import bloxboss6.mod.Main;
-import bloxboss6.mod.objects.armor.*;
+import bloxboss6.mod.objects.armor.ArmorBase;
+import bloxboss6.mod.objects.armor.ArmorTrojan;
+import bloxboss6.mod.objects.armor.ItemShirtCH;
+import bloxboss6.mod.objects.armor.ItemShirtCJ;
 import bloxboss6.mod.objects.items.ItemBase;
 import bloxboss6.mod.objects.items.ItemNonStackBase;
 import bloxboss6.mod.objects.tools.*;
@@ -129,5 +132,7 @@ public class ItemInit {
     public static final Item CHESTPLATE_TROJAN = new ArmorTrojan("chestplate_trojan", ARMOR_TROJAN, 1, EntityEquipmentSlot.CHEST);
     public static final Item LEGGINGS_TROJAN = new ArmorTrojan("leggings_trojan", ARMOR_TROJAN, 2, EntityEquipmentSlot.LEGS);
     public static final Item BOOTS_TROJAN = new ArmorTrojan("boots_trojan", ARMOR_TROJAN, 1, EntityEquipmentSlot.FEET);
+    //public static final Item QUIZ = new ItemQuiz("quiz",Main.pjotab);
+    public static final Item NEW_RIPTIDE = new SwordRiptide("sword_riptide_new", Main.pjotab);
 
 }

@@ -1,7 +1,9 @@
 package bloxboss6.mod.proxy;
 
 import bloxboss6.mod.objects.armor.models.ModelShirt;
+import bloxboss6.mod.objects.items.quiz.GuiQuiz;
 import bloxboss6.mod.util.Reference;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -36,4 +38,8 @@ public class ClientProxy extends CommonProxy implements ISideProxy {
         return net.minecraft.util.text.translation.I18n.translateToLocal(string);
     }
 
+
+    public static void openQuizGui() {
+        Minecraft.getMinecraft().displayGuiScreen(new GuiQuiz());
+    }
 }
