@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "variant=cb": { "model": "pjom:ore_overworld_cb" },
-        "variant=si": { "model": "pjom:ore_overworld_si" }
-    }
-}

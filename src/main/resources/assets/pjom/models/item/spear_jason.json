@@ -3,6 +3,14 @@
 	"textures": {
 		"0": "pjom:items/spear_jason"
 	},
+	"overrides": [
+		{
+			"predicate": {
+				"blocking": 1
+			},
+			"model": "pjom:item/spear_jason_blocking"
+		}
+	],
 	"elements": [
 		{
 			"name": "Staff",

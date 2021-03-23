@@ -8,14 +8,23 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumAction;
+import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class ToolSpear extends ItemSword implements IHasModel {
@@ -26,12 +35,12 @@ public class ToolSpear extends ItemSword implements IHasModel {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(tab);
-        /*this.addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
+        this.addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
                 return entityIn != null && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
-        });*/
+        });
 
 
         ItemInit.ITEMS.add(this);
@@ -72,15 +81,23 @@ public class ToolSpear extends ItemSword implements IHasModel {
         tooltip.add(s.replaceAll("&", "\u00a7"));
     }
 
-    /*public EnumAction getItemUseAction(ItemStack stack) {
+    // Add animation to show blocking
+    public EnumAction getItemUseAction(ItemStack stack) {
         return EnumAction.BLOCK;
     }
 
+    // Allow player to hold down right click
+    public int getMaxItemUseDuration(ItemStack stack)
+    {
+        return 72000;
+    }
+
+    // Allow it to block
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
         playerIn.setActiveHand(handIn);
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
-    }*/
+    }
 
     public boolean canHarvestBlock(IBlockState blockIn)
     {

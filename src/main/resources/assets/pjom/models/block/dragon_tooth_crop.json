@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "age=0": { "model": "pjom:dragon_tooth_crop_stage0" },
+    "age=1": { "model": "pjom:dragon_tooth_crop_stage1" },
+    "age=2": { "model": "pjom:dragon_tooth_crop_stage2" },
+    "age=3": { "model": "pjom:dragon_tooth_crop_stage3" },
+    "age=4": { "model": "pjom:dragon_tooth_crop_stage4" }
+  }
+}

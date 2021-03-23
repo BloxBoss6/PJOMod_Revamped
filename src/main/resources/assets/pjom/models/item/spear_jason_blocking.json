@@ -1,16 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "pjom:items/spear_thalia"
+		"0": "pjom:items/spear_jason"
 	},
-	"overrides": [
-		{
-			"predicate": {
-				"blocking": 1
-			},
-			"model": "pjom:item/spear_thalia_blocking"
-		}
-	],
 	"elements": [
 		{
 			"name": "Staff",
@@ -54,45 +46,42 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"scale": [1.4, 1.4, 1.4],
-			"translation": [-0.5, -5.5, 1]
+			"rotation": [13, 0, 32],
+			"translation": [1.5, -5.5, 1],
+			"scale": [1.4, 1.4, 1.4]
 		},
 		"thirdperson_lefthand": {
-			"scale": [1.4, 1.4, 1.4],
-			"translation": [0.5, -5.5, 1]
+			"rotation": [13, 0, 32],
+			"translation": [3, -5.5, 1],
+			"scale": [1.4, 1.4, 1.4]
 		},
 		"firstperson_righthand": {
-			"rotation": [-23, 94, -23],
+			"rotation": [6, 145, -58],
 			"translation": [0.5, -1.5, 10]
 		},
 		"firstperson_lefthand": {
-			"rotation": [-23, 94, -23],
-			"translation": [0.5, -3.5, 10]
+			"rotation": [6, 145, -58],
+			"translation": [0.5, -3, 10]
 		},
 		"ground": {
 			"rotation": [90, 0, 0],
 			"translation": [0, -3.5, 0]
 		},
-		"fixed": {
-			"scale": [0.8, 0.8, 0.8],
-			"rotation": [0, 0, 45],
-			"translation": [4, -5, -1]
-		},
 		"gui": {
-			"scale": [0.65, 0.65, 0.65],
 			"rotation": [0, 0, -45],
-			"translation": [-4, -3.5, 0]
+			"translation": [-4, -3.5, 0],
+			"scale": [0.65, 0.65, 0.65]
+		},
+		"fixed": {
+			"rotation": [0, 0, 45],
+			"translation": [4, -5, -1],
+			"scale": [0.8, 0.8, 0.8]
 		}
 	},
 	"groups": [0,
 		{
 			"name": "Spearhead",
-			"isOpen": true,
-			"shade": true,
-			"display": {
-				"visibility": true,
-				"autouv": true
-			},
+			"origin": [8, 8, 8],
 			"children": [1, 2]
 		}
 	]

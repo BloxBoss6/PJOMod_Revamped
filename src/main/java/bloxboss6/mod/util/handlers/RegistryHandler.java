@@ -17,7 +17,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -67,8 +66,8 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new RiptideSignEditor());
         Keybinds.register();
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
-        OBJLoader.INSTANCE.addDomain(Reference.MODID);
-        registerModel(ItemInit.NEW_RIPTIDE);
+        //OBJLoader.INSTANCE.addDomain(Reference.MODID);
+        //registerModel(ItemInit.NEW_RIPTIDE);
     }
 
     public static void initRegistries() {
