@@ -15,6 +15,5 @@ public class Reference {
 
     public static final String MODEL_SHIRT_CH = "pjom:textures/baubles/shirt_ch.png";
     public static final String MODEL_SHIRT_CJ = "pjom:textures/baubles/shirt_cj.png";
-    public static final String MODEL_HOLY_CLOAK = "pjom:textures/baubles/cloak_holy.png";
 
 }

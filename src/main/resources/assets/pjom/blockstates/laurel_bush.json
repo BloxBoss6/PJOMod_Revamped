@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "age=0": { "model": "pjom:laurel_bush_stage0" },
+    "age=1": { "model": "pjom:laurel_bush_stage1" },
+    "age=2":  {"model": "pjom:laurel_bush_stage2" }
+  }
+}

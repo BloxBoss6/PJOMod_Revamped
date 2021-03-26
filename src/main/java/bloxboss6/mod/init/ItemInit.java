@@ -5,9 +5,7 @@ import bloxboss6.mod.objects.armor.ArmorBase;
 import bloxboss6.mod.objects.armor.ArmorTrojan;
 import bloxboss6.mod.objects.armor.ItemShirtCH;
 import bloxboss6.mod.objects.armor.ItemShirtCJ;
-import bloxboss6.mod.objects.items.DragonTooth;
-import bloxboss6.mod.objects.items.ItemBase;
-import bloxboss6.mod.objects.items.ItemNonStackBase;
+import bloxboss6.mod.objects.items.*;
 import bloxboss6.mod.objects.tools.*;
 import bloxboss6.mod.util.Reference;
 import net.minecraft.init.SoundEvents;
@@ -97,7 +95,7 @@ public class ItemInit {
     public static final Item SWORD_RIPTIDE = new ToolSword("sword_riptide", TOOL_CB, Main.pjoraretab);
     public static final Item MACE_THALIA = new ItemNonStackBase("mace_thalia", Main.pjoraretab);
     public static final Item SPEAR_THALIA = new ToolSpear("spear_thalia", TOOL_CB, Main.pjoraretab);
-    public static final Item COIN_JASON = new ItemNonStackBase("coin_jason", Main.pjoraretab);
+    public static final Item COIN_JASON = new Ivlivs("coin_jason", Main.pjoraretab);
     public static final Item SWORD_JASON = new ToolSword("sword_jason", TOOL_CB, Main.pjoraretab);
     public static final Item SPEAR_JASON = new ToolSpear("spear_jason", TOOL_IG, Main.pjoraretab);
     public static final Item SWORD_BACKBITER = new ToolSword("sword_backbiter", TOOL_MA, Main.pjoraretab);
@@ -120,8 +118,7 @@ public class ItemInit {
     public static final Item HILT_PART_MA = new ItemBase("hilt_part_ma", Main.pjotab);
     public static final Item KNIFE_PART_CB = new ItemBase("knife_part_cb", Main.pjotab);
     public static final Item KNIFE_PART_IG = new ItemBase("knife_part_ig", Main.pjotab);
-    public static final Item KNIFE_PART_SI = new ItemBase("knife_part_si", Main.pjotab);
-    public static final Item KNIFE_PART_MA = new ItemBase("knife_part_ma", Main.pjotab);
+    public static final Item KNIFE_PART_SI = new ItemBase("knife_part_si", Main.pjotab);    public static final Item KNIFE_PART_MA = new ItemBase("knife_part_ma", Main.pjotab);
 
     //Shirts
     //public static final Item SHIRT_CH = new ArmorShirt("shirt_ch", ARMOR_SHIRT_CH, EntityEquipmentSlot.CHEST);
@@ -135,5 +132,6 @@ public class ItemInit {
     public static final Item BOOTS_TROJAN = new ArmorTrojan("boots_trojan", ARMOR_TROJAN, 1, EntityEquipmentSlot.FEET);
     //public static final Item QUIZ = new ItemQuiz("quiz",Main.pjotab);
     public static final Item DRAGON_TOOTH = new DragonTooth("dragon_tooth",Main.pjotab);
+    public static final Item LAUREL = new Laurel("laurel", Main.pjotab);
 
 }

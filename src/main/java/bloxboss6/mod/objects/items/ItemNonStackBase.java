@@ -56,20 +56,6 @@ public class ItemNonStackBase extends Item implements IHasModel {
                         TextFormatting.AQUA + I18n.format("shift") +
                         TextFormatting.GRAY + I18n.format(" for more info"), stacks);
             }
-        } else if (par1ItemStack.getItem() == ItemInit.COIN_JASON) {
-            if (GuiScreen.isShiftKeyDown()) {
-                addStringToTooltip(TextFormatting.BLUE + I18n.format("") +
-                        TextFormatting.ITALIC + I18n.format("IVLIVS"), stacks);
-                addStringToTooltip(TextFormatting.BLUE +I18n.format("Flip for weapon"), stacks);
-                addStringToTooltip(I18n.format(""), stacks);
-                addStringToTooltip(I18n.format("Press ") +
-                        TextFormatting.AQUA + I18n.format("V") +
-                        TextFormatting.GRAY + I18n.format(" to switch"), stacks);
-            } else {
-                addStringToTooltip(I18n.format("Press ") +
-                        TextFormatting.AQUA + I18n.format("shift") +
-                        TextFormatting.GRAY + I18n.format(" for more info"), stacks);
-            }
         }
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "pjom:blocks/laurel_bush_stage1"
+  }
+}

@@ -33,11 +33,15 @@ public class RiptideSignEditor {
     }
 
     private static boolean riptideHeld(EntityPlayer player) {
-        for (ItemStack stack : player.getHeldEquipment()) {
+        if (player.getHeldItemMainhand() == new ItemStack(ItemInit.PEN_RIPTIDE) || player.getHeldItemOffhand() == new ItemStack(ItemInit.PEN_RIPTIDE)) {
+            return true;
+        }
+
+        /*for (ItemStack stack : player.getHeldEquipment()) {
             if (stack.getItem() == ItemInit.PEN_RIPTIDE) {
                 return true;
             }
-        }
+        }*/
         return false;
     }
 

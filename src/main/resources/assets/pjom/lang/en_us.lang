@@ -93,3 +93,7 @@ item.helmet_trojan.name=Trojan Helmet
 item.chestplate_trojan.name=Trojan Chestplate
 item.leggings_trojan.name=Trojan Leggings
 item.boots_trojan.name=Trojan Boots
+item.dragon_tooth.name=Dragon Tooth
+tile.dragon_tooth_crop.name=Dragon Tooth Crop
+item.laurel.name=Laurel
+tile.laurel_bush.name=Laurel Bush

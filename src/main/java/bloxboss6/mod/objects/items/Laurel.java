@@ -20,9 +20,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
-public class DragonTooth extends Item implements IHasModel, IPlantable {
+public class Laurel extends Item implements IHasModel, IPlantable {
 
-    public DragonTooth(String name, CreativeTabs tab) {
+    public Laurel(String name, CreativeTabs tab) {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(tab);
@@ -34,11 +34,11 @@ public class DragonTooth extends Item implements IHasModel, IPlantable {
     {
         ItemStack itemstack = player.getHeldItem(hand);
         IBlockState state = worldIn.getBlockState(pos);
-        if (facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, itemstack) &&
-                state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) &&
-                worldIn.isAirBlock(pos.up()))
+        if (facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, itemstack)
+                && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this)
+                && worldIn.isAirBlock(pos.up()))
         {
-            worldIn.setBlockState(pos.up(), BlockInit.DRAGON_TOOTH_CROP.getDefaultState());
+            worldIn.setBlockState(pos.up(), BlockInit.LAUREL.getDefaultState());
 
             if (player instanceof EntityPlayerMP)
             {
@@ -57,13 +57,13 @@ public class DragonTooth extends Item implements IHasModel, IPlantable {
     @Override
     public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos)
     {
-        return EnumPlantType.Crop;
+        return EnumPlantType.Plains;
     }
 
     @Override
     public IBlockState getPlant(IBlockAccess world, BlockPos pos)
     {
-        return BlockInit.DRAGON_TOOTH_CROP.getDefaultState();
+        return BlockInit.LAUREL.getDefaultState();
     }
 
     @Override

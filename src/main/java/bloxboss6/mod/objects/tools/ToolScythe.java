@@ -61,7 +61,7 @@ public class ToolScythe extends ItemSword implements IHasModel {
     @Override
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
-        if(( entityIn instanceof EntityPlayer) && ((EntityPlayer) entityIn).getHeldItemMainhand().getItem() == ItemInit.PEN_RIPTIDE) {
+        if(( entityIn instanceof EntityPlayer) && ((EntityPlayer) entityIn).getHeldItemMainhand().getItem() == ItemInit.SCYTHE_KRONOS) {
             ItemStack scythe = new ItemStack(ItemInit.SCYTHE_KRONOS);
             scythe.addEnchantment(Enchantments.SWEEPING, 2);
         }

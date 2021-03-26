@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "normal":
+    {
+      "model": "pjom:ore_nether_si"
+    }
+  }
+}
